@@ -82,6 +82,52 @@ nav a:hover {
     align-items: center;
     gap: 0.4rem;
 }
+
+.logoindex {
+    width: auto;
+    height: 250px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.terminalsalida {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    list-style: none;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-primario-celeste);
+    border-left: 6px solid var(--color-acento);
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 128, 0.15);
+}
+
+.terminalsalida:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 128, 0.25);
+}
+
+.terminalsalida dl {
+    font-size: 20px;
+    color: var(--color-fuente-oscura);
+    margin-bottom: 12px;
+}
+
+.terminalsalida li {
+    font-size: 19px;
+    font-weight:bold;
+    color: var(--color-fuente-oscura);
+    margin-bottom: 10px;
+}
+
+.terminalsalida dd {
+    margin: 0 0 6px 20px;
+    padding-left: 12px;
+    line-height: 1.5;
+    border-left: 2px solid var(--color-primario-celeste);
+}
 /* 4. Contenido Principal y Secciones */
 
 img {
