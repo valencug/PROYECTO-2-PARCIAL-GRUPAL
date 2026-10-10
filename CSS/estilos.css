@@ -77,6 +77,11 @@ nav a:hover {
     color: var(--color-primario-azul-marino);
 }
 
+.redsocial {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
 /* 4. Contenido Principal y Secciones */
 
 img {
