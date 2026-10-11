@@ -381,3 +381,66 @@ nav.menu-lugares {
     background-color: var(--color-primario-azul-marino);
     color: var(--color-primario-celeste);
 }
+
+/*Pie pagina de cultura */
+
+.piePagina{
+    width: 100%;
+    background-color:#000080;
+}
+.piePagina .seccionesPiePagina{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+
+.piePagina .seccionesPiePagina .seccion figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piePagina .seccionesPiePagina .seccion figure img{
+    width: 197px;
+    
+}
+
+.piePagina .seccionesPiePagina .seccion h2 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.piePagina .seccionesPiePagina .seccion p{
+    color:#ffffff;
+    margin-bottom: 11px;
+}
+
+.piePagina .seccionesPiePagina .redesSociales a{
+    color: #ffffff;
+    margin-right: 11px;
+    background-color:#00588F;
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.piePagina .seccionDerechos{
+    color: #ffffff;
+    background-color:#00588F;
+    padding: 15px 10px;
+    text-align: center; 
+}
+
+.piePagina .seccionesPiePagina .seccion p a{
+    color: #ffffff;
+}
