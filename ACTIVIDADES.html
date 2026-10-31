@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="overview">
     <title>Actividades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="icon" href="IMAGENES/LOGOBERMUDIA1.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +18,9 @@
 <body>
     <header>
         <h1>Nuestras actividades en Ciudad Bermudia</h1>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
     </header>
     <img src="IMAGENES/Cultura - Costumbres.jpg" alt="portada para sección actividades">
     <nav class="navegacion">
@@ -29,32 +34,179 @@
     </nav>
 
     <main>
-        <section id="Eventos_turisticos">
+        <section id="Actividades_turisticas">
             <h2>Actividades turísticas</h2>
             <article>
                 <h3> Safaris bioluminiscentes</h3>
                 <p>Paseos presurizadas fuera de las cúpulas para alimentar a la fauna silvestre nocturna, como
                     los pulpos de cabeza transparente del fondo del mar.</p>
                 <img src="IMAGENES/pulpo_raro.webp" alt="Pulpo raro">
+                <details class="formulario">
+                    <summary class="formulario">Inscribirse en la actividad</summary>
+
+                    <form class="formulario" id="form_actividad_Safaris_bioluminiscentes">
+                        <fieldset>
+                            <legend>Informacion de inscripcion</legend>
+                            <label for="Safaris_bioluminiscentes">Actividad</label>
+                            <input class="formulario" type="text" id="Safaris_bioluminiscentes" name="actividad"
+                                value="Safaris bioluminiscentes" readonly>
+
+                            <label for="operador_Safaris_bioluminiscentes">Operador encargado:</label>
+                            <input class="formulario" type="text" id="operador_Safaris_bioluminiscentes" name="operador"
+                                value="Travells Wow S.A" readonly>
+
+                            <label for="fecha_Safaris_bioluminiscentes">Selecciona la fecha:</label>
+                            <input class="formulario" type="date" id="fecha_Safaris_bioluminiscentes"
+                                name="fecha_actividad" required min="2026-10-29">
+
+                            <label for="turno_Safaris_bioluminiscentes">Horario</label>
+                            <select class="formulario" id="turno_Safaris_bioluminiscentes" name="turno_actividad"
+                                required>
+                                <option value="" disabled selected>Selecciona un horario</option>
+                                <option value="20:00 - 21:00"> (20:00 - 21:00)</option>
+                                <option value="22:00 - 23:00"> (22:00 - 23:00)</option>
+                            </select>
+
+                            <label for="Nro_inscripciones_Safaris_bioluminiscentes">Inscripciones</label>
+                            <input class="formulario" type="number" id="Nro_inscripciones_Safaris_bioluminiscentes"
+                                name="cant_inscriptos" min="1" max="15" value="1" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Datos de Contacto</legend>
+
+                            <label for="nombre_cliente_Safaris_bioluminiscentes">Nombre completo</label>
+                            <input class="formulario" type="text" id="nombre_cliente_Safaris_bioluminiscentes"
+                                name="nombre_cliente" autocomplete="name" required placeholder="nombre apellido">
+
+                            <label for="email_cliente_Safaris_bioluminiscentes">Correo electrónico</label>
+                            <input class="formulario" type="email" id="email_cliente_Safaris_bioluminiscentes"
+                                name="email_cliente" autocomplete="email" required placeholder="xxx@ejemplo.com">
+
+                            <label for="telefono_cliente_Safaris_bioluminiscentes">Teléfono (con código de país)</label>
+                            <input class="formulario" type="tel" id="telefono_cliente_Safaris_bioluminiscentes"
+                                name="telefono_cliente" autocomplete="tel" required placeholder="+34 600 000 000">
+                        </fieldset>
+
+                        <button class="formulario" type="submit">Solicitar Reserva</button>
+                    </form>
+                </details>
             </article>
+
             <article>
                 <h3>Rally Bermudas</h3>
                 <p> Carreras de natación entre barcos hundidos, en el <i>Cementerio de Naufragios</i>, y a
                     través de los arrecifes de coral.</p>
                 <img src="IMAGENES/rally_bermudias.jpg" alt="Rally Bermudas">
+                <details class="formulario">
+                    <summary class="formulario">Inscribirse en la actividad</summary>
+
+                    <form class="formulario" id="form_actividad_Rally_Bermudas">
+                        <fieldset>
+                            <legend>Informacion de inscripcion</legend>
+                            <label for="Rally_Bermudas">Actividad</label>
+                            <input class="formulario" type="text" id="Rally_Bermudas" name="actividad"
+                                value="Rally Bermudas" readonly>
+
+                            <label for="operador_Rally_Bermudas">Operador encargado:</label>
+                            <input class="formulario" type="text" id="operador_Rally_Bermudas" name="operador"
+                                value="World of Water S.A" readonly>
+
+                            <label for="fecha_Rally_Bermudas">Selecciona la fecha:</label>
+                            <input class="formulario" type="date" id="fecha_Rally_Bermudas" name="fecha_actividad"
+                                required min="2026-10-29">
+
+                            <label for="turno_Rally_Bermudas">Horario</label>
+                            <select class="formulario" id="turno_Rally_Bermudas" name="turno_actividad" required>
+                                <option value="" disabled selected>Selecciona un horario</option>
+                                <option value="12:00 - 13:00"> (12:00 - 13:00)</option>
+                                <option value="14:00 - 15:00"> (14:00 - 15:00)</option>
+                                <option value="16:00 - 17:00"> (16:00 - 17:00)</option>
+                            </select>
+
+                            <label for="Nro_inscripciones_Rally_Bermudas">Inscripciones</label>
+                            <input class="formulario" type="number" id="Nro_inscripciones_Rally_Bermudas"
+                                name="cant_inscriptos" min="1" max="20" value="1" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Datos de Contacto</legend>
+
+                            <label for="nombre_cliente_Rally_Bermudas">Nombre completo</label>
+                            <input class="formulario" type="text" id="nombre_cliente_Rally_Bermudas"
+                                name="nombre_cliente" autocomplete="name" required placeholder="nombre apellido">
+
+                            <label for="email_cliente_Rally_Bermudas">Correo electrónico</label>
+                            <input class="formulario" type="email" id="email_cliente_Rally_Bermudas"
+                                name="email_cliente" autocomplete="email" required placeholder="xxx@ejemplo.com">
+
+                            <label for="telefono_cliente_Rally_Bermudas">Teléfono (con código de país)</label>
+                            <input class="formulario" type="tel" id="telefono_cliente_Rally_Bermudas"
+                                name="telefono_cliente" autocomplete="tel" required placeholder="+34 600 000 000">
+                        </fieldset>
+
+                        <button class="formulario" type="submit">Solicitar Reserva</button>
+                    </form>
+                </details>
             </article>
+
             <article>
                 <h3>Museo Old Bermudia</h3>
                 <p>Bermudia cuenta con un museo donde se enseñan fósiles de antiguos animales que vivieron en
                     la zona, la historia de la ciudad, arte y mas variedad.</p>
                 <img src="IMAGENES/Museo_Old_Bermudia.jpg" alt="Foto de Museo Old Bermudia">
-            </article>
-            <article>
-                <h3>Ferias de tecnologías marinas</h3>
-                <p>En estos lugares se dan a conocer sobre diversas tecnologías marítimas que se utilizan en
-                    Bermudia, además empresas suelen dar a conocer nuevas tecnologías y estan abiertas a contratar
-                    nuevos trabjadores.</p>
-                <img src="IMAGENES/Feria_tecnologica_marina.jpg" alt="feria de tecnologías marinas">
+                <details class="formulario">
+                    <summary class="formulario">Inscribirse en la actividad</summary>
+
+                    <form class="formulario" id="form_actividad_Museo_Old_Bermudia">
+                        <fieldset>
+                            <legend>Informacion de inscripcion</legend>
+                            <label for="Museo_Old_Bermudia">Actividad</label>
+                            <input class="formulario" type="text" id="Museo_Old_Bermudia" name="actividad"
+                                value="Museo Old Bermudia" readonly>
+
+                            <label for="operador_Museo_Old_Bermudia">Operador encargado:</label>
+                            <select class="formulario" id="operador_Museo_Old_Bermudia" name="turno_actividad" required>
+                                <option value="" disabled selected>Selecciona un operador</option>
+                                <option value="Old Oldest S.A"> Old Oldest S.A</option>
+                                <option value="Macrolast S.R.L"> Macrolast S.R.L</option>
+                            </select>
+
+                            <label for="fecha_Museo_Old_Bermudia">Selecciona la fecha:</label>
+                            <input class="formulario" type="date" id="fecha_Museo_Old_Bermudia" name="fecha_actividad"
+                                required min="2026-10-29">
+
+                            <label for="turno_Museo_Old_Bermudia">Horario</label>
+                            <select class="formulario" id="turno_Museo_Old_Bermudia" name="turno_actividad" required>
+                                <option value="" disabled selected>Selecciona un horario</option>
+                                <option value="9:00 - 11:00"> (9:00 - 11:00)</option>
+                                <option value="16:00 - 18:00"> (16:00 - 18:00)</option>
+                            </select>
+
+                            <label for="Nro_inscripciones_Museo_Old_Bermudia">Inscripciones</label>
+                            <input class="formulario" type="number" id="Nro_inscripciones_Museo_Old_Bermudia"
+                                name="cant_inscriptos" min="1" max="30" value="1" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Datos de Contacto</legend>
+
+                            <label for="nombre_cliente_Museo_Old_Bermudia">Nombre completo</label>
+                            <input class="formulario" type="text" id="nombre_cliente_Museo_Old_Bermudia"
+                                name="nombre_cliente" autocomplete="name" required placeholder="nombre apellido">
+
+                            <label for="email_cliente_Museo_Old_Bermudia">Correo electrónico</label>
+                            <input class="formulario" type="email" id="email_cliente_Museo_Old_Bermudia"
+                                name="email_cliente" autocomplete="email" required placeholder="xxx@ejemplo.com">
+
+                            <label for="telefono_cliente_Museo_Old_Bermudia">Teléfono (con código de país)</label>
+                            <input class="formulario" type="tel" id="telefono_cliente_Museo_Old_Bermudia"
+                                name="telefono_cliente" autocomplete="tel" required placeholder="+34 600 000 000">
+                        </fieldset>
+
+                        <button class="formulario" type="submit">Solicitar Reserva</button>
+                    </form>
+                </details>
             </article>
             <article>
                 <h3>Aquasprint</h3>
@@ -63,7 +215,84 @@
                     equipo tiene un arco en forma de aro en el cual hay que anotar. En este deporte no se puede
                     tener la pelota durante un prolongado periodo de tiempo.</p>
                 <img src="IMAGENES/Juego_Aquasprint.jpg" alt="Imagen de un partido de Aquasprint">
+                <details class="formulario">
+                    <summary class="formulario">Inscribirse en la actividad</summary>
+
+                    <form class="formulario" id="form_actividad_Aquasprint">
+                        <fieldset>
+                            <legend>Informacion de inscripcion</legend>
+                            <label for="Aquasprint">Actividad</label>
+                            <input class="formulario" type="text" id="Aquasprint" name="actividad" value="Aquasprint"
+                                readonly>
+
+                            <label for="operador_Aquasprint">Operador encargado:</label>
+                            <select class="formulario" id="operador_Aquasprint" name="turno_actividad" required>
+                                <option value="" disabled selected>Selecciona un operador</option>
+                                <option value="Urburus S.A"> Old Oldest S.A</option>
+                                <option value="AquazSports S.R.L"> Macrolast S.R.L</option>
+                                <option value="Portsgart S.A"> Old Oldest S.A</option>
+                                <option value="Max United S.A"> Macrolast S.R.L</option>
+                            </select>
+
+                            <label for="fecha_Aquasprint">Selecciona la fecha:</label>
+                            <input class="formulario" type="date" id="fecha_Aquasprint" name="fecha_actividad" required
+                                min="2026-10-29">
+
+                            <label for="turno_Aquasprint">Horario</label>
+                            <select class="formulario" id="turno_Aquasprint" name="turno_actividad" required>
+                                <option value="" disabled selected>Selecciona un horario</option>
+                                <option value="06:00 - 07:00"> (06:00 - 07:00)</option>
+                                <option value="07:30 - 08:30"> (07:30 - 08:30)</option>
+                                <option value="09:00 - 10:00"> (09:00 - 10:00)</option>
+                                <option value="10:30 - 11:30"> (10:30 - 11:30)</option>
+                                <option value="12:00 - 13:00"> (12:00 - 13:00)</option>
+                                <option value="13:30 - 14:30"> (13:30 - 14:30)</option>
+                                <option value="15:00 - 16:00"> (15:00 - 16:00)</option>
+                                <option value="16:30 - 17:30"> (16:30 - 17:30)</option>
+                                <option value="18:00 - 19:00"> (18:00 - 19:00)</option>
+                                <option value="19:30 - 20:30"> (19:30 - 20:30)</option>
+                                <option value="21:00 - 22:00"> (21:00 - 22:00)</option>
+                                <option value="22:30 - 23:30"> (22:30 - 23:30)</option>
+                                <option value="00:00 - 01:00"> (00:00 - 01:00)</option>
+                            </select>
+
+                            <label for="Nro_inscripciones_Aquasprint">Inscripciones</label>
+                            <input class="formulario" type="number" id="Nro_inscripciones_Aquasprint"
+                                name="cant_inscriptos" min="1" max="10" value="1" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Datos de Contacto</legend>
+
+                            <label for="nombre_cliente_Aquasprint">Nombre completo</label>
+                            <input class="formulario" type="text" id="nombre_cliente_Aquasprint" name="nombre_cliente"
+                                autocomplete="name" required placeholder="nombre apellido">
+
+                            <label for="email_cliente_Aquasprint">Correo electrónico</label>
+                            <input class="formulario" type="email" id="email_cliente_Aquasprint" name="email_cliente"
+                                autocomplete="email" required placeholder="xxx@ejemplo.com">
+
+                            <label for="telefono_cliente_Aquasprint">Teléfono (con código de país)</label>
+                            <input class="formulario" type="tel" id="telefono_cliente_Aquasprint"
+                                name="telefono_cliente" autocomplete="tel" required placeholder="+34 600 000 000">
+                        </fieldset>
+
+                        <button class="formulario" type="submit">Solicitar Reserva</button>
+                    </form>
+                </details>
             </article>
+
+            <article>
+                <h3>Ferias de tecnologías marinas</h3>
+                <p>En estos lugares se dan a conocer sobre diversas tecnologías marítimas que se utilizan en
+                    Bermudia, además empresas suelen dar a conocer nuevas tecnologías y estan abiertas a contratar
+                    nuevos trabjadores.</p>
+                <img src="IMAGENES/Feria_tecnologica_marina.jpg" alt="feria de tecnologías marinas">
+                <br>
+                <p>Todos los 20 de cada mes en <a class="actividad" href="https://maps.app.goo.gl/DuaZxs5gpTUDGQTt6"
+                        target="_blank" rel="noopener noreferrer">Water Fall</a></p>
+            </article>
+
         </section>
     </main>
 

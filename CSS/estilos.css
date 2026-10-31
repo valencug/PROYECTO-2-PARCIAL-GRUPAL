@@ -36,9 +36,11 @@ body {
 
 main {
     padding: 1rem;
-    background-color: rgba(252, 251, 242, 0.88); /* tu --color-fondo con transparencia */
+    background-color: rgba(252, 251, 242, 0.88);
+    /* tu --color-fondo con transparencia */
     border-radius: 10px;
 }
+
 /* 3. Encabezado y Navegación */
 header {
     background: var(--color-primario-azul-marino);
@@ -530,4 +532,51 @@ li.lista-ciudad {
 li.lista-ciudad:hover {
     cursor: pointer;
     color: rgb(255, 111, 0);
+}
+
+button.formulario {
+    background-color: var(--color-primario-azul-marino);
+    color: var(--color-acento);
+}
+
+button.formulario:hover {
+    background-color: #035dd2;
+    cursor: pointer;
+}
+
+input.formulario {
+    border: 2px solid var(--color-primario-azul-marino);
+    margin-right: auto;
+    margin-left: 5px;
+    width: 98%;
+    display: block;
+}
+
+select.formulario {
+    border: 2px solid var(--color-primario-azul-marino);
+    margin-right: auto;
+    margin-left: 5px;
+    width: 98%;
+    display: block;
+}
+
+details.formulario {
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    margin: 5px;
+    width: 60%;
+}
+
+summary.formulario {
+    background-color: var(--color-primario-azul-marino);
+    color: var(--color-acento);
+}
+
+a.actividad {
+    display: inline
+}
+
+a.actividad:hover {
+    color: orange;
 }
