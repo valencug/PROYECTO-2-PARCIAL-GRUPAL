@@ -624,3 +624,19 @@ a.actividad:hover {
     background-color: var(--color-primario-azul-marino);
     color: var(--color-acento);
 }
+
+/* --- Grilla de lugares de interés (lugares de interes.html) --- */
+.grilla-lugares {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.grilla-lugares .lugar {
+    flex: 1 1 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 0;
+}
