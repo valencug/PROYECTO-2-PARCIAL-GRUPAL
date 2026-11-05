@@ -442,6 +442,20 @@ nav.menu-lugares {
     padding: 45px 0px;
 }
 
+/* Footer apilado: una sección debajo de la otra, siempre */
+.piePagina .seccionesPiePagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem 1rem;
+}
+
+.piePagina .seccionesPiePagina .seccion {
+    width: 100%;
+    max-width: 700px;
+}
+
 .piePagina .seccionesPiePagina .seccion figure {
     width: 100%;
     height: 100%;
@@ -600,7 +614,8 @@ a.actividad:hover {
 }
 
 .destacados article {
-    flex: 1 1 280px;
+    flex: 1 1 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -647,7 +662,8 @@ a.actividad:hover {
 }
 
 .grilla-lugares .lugar {
-    flex: 1 1 420px;
+    flex: 1 1 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -655,15 +671,355 @@ a.actividad:hover {
     margin: 0;
 }
 
+/* --- Grilla de eventos (eventos.html) --- */
+.grilla-eventos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.grilla-eventos .evento {
+    flex: 1 1 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 1.5rem;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-primario-celeste);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 128, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grilla-eventos .evento:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 128, 0.15);
+}
+
+.grilla-eventos .evento h3 {
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--color-acento);
+}
+
+.grilla-eventos .evento time {
+    color: var(--color-fuente-oscura);
+    font-weight: bold;
+}
+
+.grilla-eventos .evento p {
+    margin-bottom: 0;
+}
+
+.grilla-eventos .evento img {
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    margin-top: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
 /* En pantallas chicas las cards ocupan todo el ancho disponible */
 @media (max-width: 700px) {
     .destacados,
-    .grilla-lugares {
+    .grilla-lugares,
+    .grilla-eventos {
         gap: 1rem;
     }
 
     .destacados article,
-    .grilla-lugares .lugar {
+    .grilla-lugares .lugar,
+    .grilla-eventos .evento {
         flex: 1 1 100%;
+    }
+}
+
+/* ==========================================================================
+   Responsive - Adaptación a celulares
+   ========================================================================== */
+
+/* Tipografía fluida: se achica en pantallas chicas y no se sale del ancho */
+h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+}
+
+h2 {
+    font-size: clamp(1.4rem, 4.5vw, 1.9rem);
+}
+
+h3 {
+    font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+}
+
+h4 {
+    font-size: clamp(1rem, 3vw, 1.15rem);
+}
+
+body {
+    font-size: clamp(15px, 2.2vw, 16px);
+}
+
+main p {
+    font-size: clamp(15px, 2.2vw, 18px);
+}
+
+li {
+    font-size: clamp(15px, 2.2vw, 17px);
+}
+
+.eslogan {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+}
+
+.terminalsalida dl {
+    font-size: clamp(16px, 2.5vw, 20px);
+}
+
+.terminalsalida li {
+    font-size: clamp(15px, 2.4vw, 19px);
+}
+
+.lugar dl {
+    font-size: clamp(16px, 2.5vw, 20px);
+}
+
+.lugar dt {
+    font-size: clamp(15px, 2.4vw, 18px);
+}
+
+/* Nada se sale del ancho de la pantalla */
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+main,
+section,
+article,
+form,
+fieldset,
+table,
+figure {
+    max-width: 100%;
+}
+
+fieldset {
+    min-width: 0;
+}
+
+p,
+li,
+dd,
+td,
+th,
+a {
+    overflow-wrap: break-word;
+}
+
+/* Contenedor para que las tablas anchas se puedan desplazar sin romper la página */
+.tabla-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    body {
+        padding: 0 0.5rem;
+        background-size: 320px;
+    }
+
+    header {
+        padding: 1rem 0.75rem;
+    }
+
+    h1 {
+        margin: 16px 0;
+    }
+
+    main {
+        padding: 0.5rem;
+    }
+
+    section {
+        margin: 20px 0;
+        padding: 14px;
+    }
+
+    article {
+        padding: 14px;
+        margin: 14px 0;
+    }
+
+    nav {
+        gap: 6px;
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 15px;
+    }
+
+    nav:not(.menu-lugares) {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav:not(.menu-lugares) a {
+        text-align: center;
+    }
+
+    nav.propio span {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav.menu-lugares {
+        position: static;
+        transform: none;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .terminalsalida {
+        padding: 14px;
+        margin: 14px 0;
+    }
+
+    .terminalsalida dd {
+        margin-left: 10px;
+    }
+
+    img {
+        height: auto;
+        max-height: 280px;
+    }
+
+    article img,
+    aside img {
+        max-width: 100%;
+        height: auto;
+        max-height: 260px;
+    }
+
+    .presentacion img {
+        width: 100%;
+        height: auto;
+    }
+
+    .logoindex {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .lugar img {
+        height: auto;
+        max-height: 260px;
+    }
+
+    .grilla-eventos .evento {
+        padding: 1rem;
+    }
+
+    .grilla-eventos .evento img {
+        height: auto;
+        max-height: 240px;
+    }
+
+    .imagen-billete {
+        width: 100%;
+    }
+
+    .imagen-centrada {
+        padding: 0;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 0.4rem 0.5rem;
+    }
+
+    select,
+    #fecha {
+        width: 100%;
+    }
+
+    details.formulario {
+        width: 100%;
+        margin: 0 0 12px;
+    }
+
+    input.formulario,
+    select.formulario {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .piePagina .seccionesPiePagina {
+        gap: 1.5rem;
+        padding: 1.5rem 0.75rem;
+    }
+
+    .piePagina .seccionesPiePagina .seccion {
+        max-width: 100%;
+    }
+
+    .piePagina .seccionesPiePagina .seccion figure img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 7px 8px;
+    }
+
+    section {
+        padding: 12px;
+    }
+
+    article {
+        padding: 12px;
+    }
+
+    .piePagina .seccionesPiePagina .redesSociales a {
+        width: 44px;
+        height: 44px;
     }
 }

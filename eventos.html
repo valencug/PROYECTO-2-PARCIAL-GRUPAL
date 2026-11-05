@@ -2,6 +2,7 @@
 <html lang="es">  
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Eventos de Bermudia</title>
         <link rel="icon" href="IMAGENES/LOGOBERMUDIA1.png" type="image/png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +16,7 @@
         <header>
             <h1>Eventos de nuestra ciudad</h1>
         </header>
-        <img src="IMAGENES/foto_del_campeon_anterior.jpeg" alt="portada para sección eventos">
+        <img class="imagen-encabezado" src="IMAGENES/foto_del_campeon_anterior.jpeg" alt="portada para sección eventos">
     <nav class="navegacion">
         <a href="index.html">Inicio</a>
         <a href="ACTIVIDADES.html">Actividades</a>
@@ -29,7 +30,6 @@
         <a href = "#Festival_de_la_raba_gigante"> Festival de la raba gigante </a>
         <a href = "#Dias_festivos"> Días festivos </a>
         <a href = "#Eventos_climaticos"> Eventos climáticos </a>
-        <a href = "#Eventos_turisticos"> Eventos turísticos </a>
     </nav>
 
 
@@ -79,24 +79,22 @@
                 </article>
             </div>
         </section>
-        <section id = "Eventos_climaticos">
+        <section id="Eventos_climaticos">
             <h2>Eventos climáticos</h2>
+            <div class="grilla-eventos">
+                <article class="evento">
+                    <h3>Migración de corrientes</h3>
+                    <time datetime="2026-11-09">9 de Noviembre de 2026</time>
+                    <p>Oleadas heladas del norte chocan contra las cúpulas. Generan heladas que congelan las paredes internas de las cúpulas.</p>
+                    <img src="IMAGENES/corrientes_heladas.webp" alt="Heladas pronosticadas en la ciudad">
+                </article>
 
-            <article>
-                <time datetime="2026-09-09">
-                    9 de Noviembre de 2026
-                </time>
-                <h3> Migración de corrientes</h3>
-                <p>Oleadas heladas del norte chocan contra las cúpulas. Generan heladas que congelan las paredes internas de las cúpulas.</p>
-                <img src="IMAGENES/corrientes_heladas.webp" alt = "Heladas pronosticadas en la ciudad">
-            </article>
-            <article>
-                <time datetime="2026-09-09">
-                    10 de Noviembre de 2026
-                </time>
-                <h3>El Vórtice</h3>
-                <p> Tormentas en la superficie generan turbulencias y distorcionan el campo magnético de abajo. Que obligan a aislar la ciudad y suspender el transporte. La ciudad queda aislada hasta que pase el fenómeno.</p>                
-            </article>
+                <article class="evento">
+                    <h3>El Vórtice</h3>
+                    <time datetime="2026-11-10">10 de Noviembre de 2026</time>
+                    <p>Tormentas en la superficie generan turbulencias y distorsionan el campo magnético de abajo, lo que obliga a aislar la ciudad y suspender el transporte. La ciudad queda aislada hasta que pase el fenómeno.</p>
+                </article>
+            </div>
         </section>
      
     </main>
