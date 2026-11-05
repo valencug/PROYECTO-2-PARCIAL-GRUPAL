@@ -169,6 +169,12 @@ img {
     margin-right: auto;
 }
 
+/* Imagen del billete: el ancho que antes estaba inline en ciudad.html */
+.imagen-billete {
+    width: 40rem;
+    max-width: 100%;
+}
+
 main {
     padding: 1rem 0;
 }
