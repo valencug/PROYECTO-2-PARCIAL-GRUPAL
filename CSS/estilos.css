@@ -580,3 +580,23 @@ a.actividad {
 a.actividad:hover {
     color: orange;
 }
+
+/* ==========================================================================
+   Flexbox
+   ========================================================================== */
+
+/* --- Grilla de cards de la portada (index.html) --- */
+.destacados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.destacados article {
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 0;
+}
