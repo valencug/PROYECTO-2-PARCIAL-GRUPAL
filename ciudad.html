@@ -29,14 +29,14 @@
         <a href="contacto.html">Contacto</a>
     </nav>
 
-    <nav class="propio"> 
-        <a href = "#ciudad"> sobre la ciudad </a>
-        <a href = "#informacion_de_Bermudia"> informacion de Bermudia </a>
-        <a href = "#Moneda_de_Bermudia"> Moneda de Bermudia </a>
+    <nav class="propio">
+        <a href="#ciudad"> sobre la ciudad </a>
+        <a href="#informacion_de_Bermudia"> informacion de Bermudia </a>
+        <a href="#Moneda_de_Bermudia"> Moneda de Bermudia </a>
     </nav>
-    
+
     <main>
-        <section>
+        <section class="lugar">
             <article id="ciudad">
                 <h2>Sobre la ciudad Bermudia</h2>
                 <p>Bermudia Es una ciudad la cual se construyo bajo el oceano gracias al desarrollo de tecnologia
@@ -69,7 +69,7 @@
             </article>
         </section>
 
-        <section id="Moneda_de_Bermudia">
+        <section id="Moneda_de_Bermudia" class="lugar">
             <article>
                 <h3>Moneda</h3>
                 <p>El Quat (Q$) es la moneda oficial de Bermudia y una moneda fuerte del mundo contemporaneo. Respaldada
@@ -84,50 +84,50 @@
                 </p>
                 <h4>Tabla de cambios de algunas monedas</h4>
                 <div class="tabla-scroll">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Divisa Extranjera</th>
-                            <th>Codigo</th>
-                            <th>Valor de 1 Quat</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Dolar Estadounidense</td>
-                            <td>USD</td>
-                            <td>&dollar;1.35</td>
-                        </tr>
-                        <tr>
-                            <td>Euro</td>
-                            <td>EUR</td>
-                            <td>&euro;1.20</td>
-                        </tr>
-                        <tr>
-                            <td>Libra Esterlina</td>
-                            <td>GBP</td>
-                            <td>&pound;1.01</td>
-                        </tr>
-                        <tr>
-                            <td>Peso Mexicano</td>
-                            <td>MXN</td>
-                            <td>&dollar;24.84</td>
-                        </tr>
-                        <tr>
-                            <td>Yen Japones</td>
-                            <td>JPY</td>
-                            <td>&yen;213.09</td>
-                        </tr>
-                        <tr>
-                            <td>Peso Argentino</td>
-                            <td>ARS</td>
-                            <td>&dollar;2.042,41</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Divisa Extranjera</th>
+                                <th>Codigo</th>
+                                <th>Valor de 1 Quat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dolar Estadounidense</td>
+                                <td>USD</td>
+                                <td>&dollar;1.35</td>
+                            </tr>
+                            <tr>
+                                <td>Euro</td>
+                                <td>EUR</td>
+                                <td>&euro;1.20</td>
+                            </tr>
+                            <tr>
+                                <td>Libra Esterlina</td>
+                                <td>GBP</td>
+                                <td>&pound;1.01</td>
+                            </tr>
+                            <tr>
+                                <td>Peso Mexicano</td>
+                                <td>MXN</td>
+                                <td>&dollar;24.84</td>
+                            </tr>
+                            <tr>
+                                <td>Yen Japones</td>
+                                <td>JPY</td>
+                                <td>&yen;213.09</td>
+                            </tr>
+                            <tr>
+                                <td>Peso Argentino</td>
+                                <td>ARS</td>
+                                <td>&dollar;2.042,41</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <img class="imagen-centrada imagen-billete" src="IMAGENES/BilleteQuat100.jpg"
-                    alt="Billete de 100 Quats de Bermudia">
+                <img class="imagen-centrada imagen-billete" style="height: auto; width: 80%;"
+                    src="IMAGENES/BilleteQuat100.jpg" alt="Billete de 100 Quats de Bermudia">
             </article>
         </section>
     </main>
@@ -163,6 +163,19 @@
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <a href="#" class="position-fixed bottom-0 start-0 m-4 z-3 text-decoration-none" title="Volver arriba">
+        <div class="position-relative d-inline-block text-center">
+
+
+            <img src="https://cdn.pixabay.com/photo/2013/07/13/10/43/blue-157652_1280.png" alt="Volver arriba"
+                class="filter-shadow img-fluid burbuja">
+            <span class="position-absolute top-50 start-50 translate-middle fw-bold burbuja">ARRIBA</span>
+
+
+        </div>
+    </a>
+
+
 </body>
 
 </html>
