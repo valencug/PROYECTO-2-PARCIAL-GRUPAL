@@ -402,18 +402,33 @@ html {
 
 /*menu interno de lugares de interés*/
 nav.menu-lugares {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    flex-direction: column;
+    /* Por defecto: barra horizontal normal, NO tapa el contenido */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 6px;
-    width: 200px;
+    margin: 10px 0;
     padding: 12px;
     background-color: var(--color-primario-celeste);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 128, 0.08);
+}
+
+/* Solo en pantallas anchas (hay espacio libre a los costados del contenido
+   de 1100px) el menú flota a la derecha sin tapar nada */
+@media (min-width: 1560px) {
+    nav.menu-lugares {
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: 200px;
+        margin: 0;
+    }
 }
 
 .menu-lugares a {
@@ -1039,4 +1054,84 @@ span.burbuja {
 
 .etiqueta {
     background-color: crimson;
+}
+
+/* ==========================================================================
+   Bootstrap - Navbar responsiva (hamburguesa)
+   Personaliza el navbar de Bootstrap con la paleta de la ciudad.
+   Los selectores llevan "nav.navbar-bermudia" para ganarle a las reglas
+   genericas "nav" / "nav a" de arriba SIN tocarlas (las usan nav.propio y
+   nav.menu-lugares).
+   ========================================================================== */
+nav.navbar.navbar-bermudia {
+    --bs-dark-rgb: 0, 0, 128;
+    /* = --color-primario-azul-marino (bg-dark) */
+    --bs-navbar-brand-color: var(--color-acento);
+    --bs-navbar-brand-hover-color: var(--color-primario-celeste);
+    --bs-navbar-toggler-border-color: var(--color-acento);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Marca: logo + nombre */
+nav.navbar-bermudia .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+    font-size: 1.4rem;
+    background-color: transparent;
+}
+
+nav.navbar-bermudia .navbar-brand:hover {
+    background-color: transparent;
+}
+
+nav.navbar-bermudia .logo-navbar {
+    width: auto;
+    height: 36px;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+}
+
+/* Links del menu */
+nav.navbar-bermudia .navbar-nav {
+    gap: 0.25rem;
+}
+
+nav.navbar-bermudia .nav-item {
+    margin-bottom: 0;
+}
+
+nav.navbar-bermudia .navbar-nav .nav-link {
+    color: var(--color-acento);
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    text-align: left;
+    white-space: nowrap;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav.navbar-bermudia .navbar-nav .nav-link:hover,
+nav.navbar-bermudia .navbar-nav .nav-link:focus {
+    background-color: var(--color-acento);
+    color: var(--color-primario-azul-marino);
+}
+
+/* Pagina actual */
+nav.navbar-bermudia .navbar-nav .nav-link.active {
+    background-color: var(--color-primario-celeste);
+    color: var(--color-primario-azul-marino);
+}
+
+/* Menu desplegado en celular */
+@media (max-width: 991.98px) {
+    nav.navbar-bermudia .navbar-nav {
+        padding: 0.5rem 0;
+    }
 }
