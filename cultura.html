@@ -12,10 +12,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/estilos.css">
+
+    <script>
+        if (localStorage.getItem('modo-dark') === 'enabled') {
+            document.documentElement.classList.add('modo-dark');
+        }
+    </script>
 </head>
 
 <body>
-    <button id="modoOscuro" type="button" class="btn btn-dark">
+    <button id="modoOscuro" type="button" class="btn btn-dark modo-dark">
         Modo oscuro
     </button>
     <header>
@@ -29,9 +35,8 @@
             <a class="navbar-brand" href="index.html">
                 <img src="IMAGENES/LOGOBERMUDIA1.png" alt="Bermudia" class="logo-navbar">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false"
-                aria-label="Abrir menú de navegación">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menuPrincipal">
@@ -80,14 +85,22 @@
                     </div>
                     <div class="cold-12 col-md-6">
                         <p>
-                            <small>El idioma oficial de Bermudia es el español, aunque no siempre fue así. Durante siglos, sus habitantes utilizaron una lengua ancestral
-                                   conocida como bermudiano, que formaba parte de su identidad cultural y se transmitía de generación en generación. Sin embargo, durante 
-                                   el período de expansión colonial española por el Caribe, Bermudia fue descubierta por exploradores que establecieron contacto con sus habitantes. 
-                                   Con el tiempo, la Corona española buscó extender su influencia política y cultural sobre la ciudad submarina, imponiendo el castellano como lengua 
-                                   de la administración, la educación y las relaciones comerciales. Esta transformación provocó numerosos conflictos entre quienes defendían la lengua
-                                   originaria y quienes consideraban que adoptar el español facilitaría las relaciones con el mundo exterior. Finalmente, tras un prolongado período de
-                                   dominación extranjera, el español se consolidó como idioma oficial. En la actualidad, aunque la mayoría de los ciudadanos habla español, el antiguo
-                                   bermudiano todavía se conserva en algunas expresiones populares, ceremonias tradicionales y documentos históricos, como símbolo de resistencia e identidad cultural.
+                            <small>El idioma oficial de Bermudia es el español, aunque no siempre fue así. Durante
+                                siglos, sus habitantes utilizaron una lengua ancestral
+                                conocida como bermudiano, que formaba parte de su identidad cultural y se transmitía de
+                                generación en generación. Sin embargo, durante
+                                el período de expansión colonial española por el Caribe, Bermudia fue descubierta por
+                                exploradores que establecieron contacto con sus habitantes.
+                                Con el tiempo, la Corona española buscó extender su influencia política y cultural sobre
+                                la ciudad submarina, imponiendo el castellano como lengua
+                                de la administración, la educación y las relaciones comerciales. Esta transformación
+                                provocó numerosos conflictos entre quienes defendían la lengua
+                                originaria y quienes consideraban que adoptar el español facilitaría las relaciones con
+                                el mundo exterior. Finalmente, tras un prolongado período de
+                                dominación extranjera, el español se consolidó como idioma oficial. En la actualidad,
+                                aunque la mayoría de los ciudadanos habla español, el antiguo
+                                bermudiano todavía se conserva en algunas expresiones populares, ceremonias
+                                tradicionales y documentos históricos, como símbolo de resistencia e identidad cultural.
 
                             </small>
                         </p>
@@ -151,7 +164,8 @@
                         Todos los nacidos en Bermudia tienen una mezcla de la curiosidad y miedo por subir
                         hacia la superficie. Desde pequeños, la gente mayor les advierte sobre los peligros
                         de abandonar las profundidades del océano. Este comportamiento es entendible ya que numerosas
-                        generaciones de Bermudianos se han adaptado a las condiciones de la vida submarina. Debido a esto,
+                        generaciones de Bermudianos se han adaptado a las condiciones de la vida submarina. Debido a
+                        esto,
                         la exposición repentina de sus cuerpo a la superficie pordría provocar alteraciones fisiológicas
                         deribando en complicaciones en el sistema inmunológico.
                         A pesar de estos impedimentos, muchos Bermudianos han abierto debates sobre la posibilidad de
@@ -164,14 +178,17 @@
                 <dd>
                     <small>
                         La educación es fundamental en la sociedad Bermudiana. En las escuelas, desde temprana edad, los
-                        niños reciben una formación orientada al conocimiento de océanao y a identificar todas las especies
-                        marinos que la habitan y sus comportamientos. Dichas actividades es menester para poder avanzar 
-                        académicamente ya que se evalúan con regularidad a lo largo de sus vidas. Entre las especies más 
+                        niños reciben una formación orientada al conocimiento de océanao y a identificar todas las
+                        especies
+                        marinos que la habitan y sus comportamientos. Dichas actividades es menester para poder avanzar
+                        académicamente ya que se evalúan con regularidad a lo largo de sus vidas. Entre las especies más
                         destacadas, la ballena ocupa un lugar eespecial en nuestra sociedad. Acá se la considera como un
                         animal sagrado asociada a la buena fortuna y la proteccion de la ciudad. En las fechas festivas,
                         su figura aparece con frecuencia en obras, banderas y estampados.
-                        Los estudiantes reciben formación básica en biotecnología, historial oceano e historia de Bermudia.
-                        Todo eso con el objetivo de preservar las tradiciones, el desarrollo de la ciudad y las especies.
+                        Los estudiantes reciben formación básica en biotecnología, historial oceano e historia de
+                        Bermudia.
+                        Todo eso con el objetivo de preservar las tradiciones, el desarrollo de la ciudad y las
+                        especies.
                         Aunque no todos deciden adentrarse más allá y especializarse como profesionales de la salud.
 
                     </small>
@@ -181,9 +198,9 @@
                     <small>
                         Cada familia que existe posee un lobo marino como mascota. Ellos son el estandar de lo que es
                         una mascota en esta ciudad y el único permitido por el gobierno hasta la actualidad debido a
-                        su caracter social y para nada solitario. 
+                        su caracter social y para nada solitario.
                         El lobo marino suele acompañar a la familia en su vida cotidiana y ayudacon pequeñas tareas
-                        si les es posible. Esta ayuda que proporsionan es gracias a su tan valorada inteligencia, 
+                        si les es posible. Esta ayuda que proporsionan es gracias a su tan valorada inteligencia,
                         su caracter sociable y su capacidad para entender lo que es un vínculo emocional.
                         El lazo entre los bermudianos y sus mascotas es fuerte al punto de que existen espacios
                         recreativos especificamente para que las familias puedan pasar una tarde agradable con los
@@ -199,22 +216,27 @@
                         A pesar de vivir en las profundidades del océano, el ciudadano promedio consume mucho contenido
                         audiovisual occidental de los humanos de la
                         superficie. Desde la expansión del internet que tienen accceso a cualquier
-                        sitio web, plataformas de entretenimiento y redes sociales usadas en la actualidad. 
+                        sitio web, plataformas de entretenimiento y redes sociales usadas en la actualidad.
                         Al igual que en la superficie, las series, videojuegos y canales de streaming forman parte
                         de su vida cotidiana.
-                        Incluso algunos ciudadanos se han convertido en creadores de contenido muy reconocidos 
+                        Incluso algunos ciudadanos se han convertido en creadores de contenido muy reconocidos
                         internacionalmente, compartiendo con el mundo videos sobre como cómo es la vida en Bermudia
                         y sus particularidades.
-                        Una pasión que se despierta en cualquier Bermudiano sin importar edad y genero es disfrutar de la
-                        competición que caracteriza a esta ciudad, la aclamada <strong>"Copa de las profundidades"</strong>,
-                        el evento más aclamado e importante  de la ciudad.
+                        Una pasión que se despierta en cualquier Bermudiano sin importar edad y genero es disfrutar de
+                        la
+                        competición que caracteriza a esta ciudad, la aclamada <strong>"Copa de las
+                            profundidades"</strong>,
+                        el evento más aclamado e importante de la ciudad.
                         Esta competición consiste en una serie de pruebas de natacion extremas, las cuales requieren de
-                        una extrema destreza de nado. Durante los circuitos aparecen obstaculos de alta complejidad. 
+                        una extrema destreza de nado. Durante los circuitos aparecen obstaculos de alta complejidad.
                         Los deportistas que disputan esta
-                        competición son capaces de hacerlo no solo por las grandes condiciones de nadeo con las que nace un
-                        bermudiano sino tambien por el arduo entrenamiento que ejercen desde temprana edad para convertirse
+                        competición son capaces de hacerlo no solo por las grandes condiciones de nadeo con las que nace
+                        un
+                        bermudiano sino tambien por el arduo entrenamiento que ejercen desde temprana edad para
+                        convertirse
                         en deportistas de élite.
-                        Estas pruebas son sesiones de largas horas, las cuales son cronometradas en funcion de dar como ganador
+                        Estas pruebas son sesiones de largas horas, las cuales son cronometradas en funcion de dar como
+                        ganador
                         al que las supere en la menor cantidad de tiempo posible. Cada torneo es jugado fuera
                         de la cúpula y televisado en cadena, de forma que interrumpe cualquier programa que se estuviese
                         emitiendo anteriormente. Durante el torneo, la poblacion se reune con sus familaires o amigos

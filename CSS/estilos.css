@@ -6,6 +6,18 @@
     --color-fuente-oscura: #83898d;
     --color-fondo: #FCFBF2;
 
+    --imagen-fondo: url("../IMAGENES/FONDOPAGINA2.jpg");
+
+}
+
+html.modo-dark {
+    --color-primario-azul-marino: #000080;
+    --color-primario-celeste: #90d5ff;
+    --color-acento: #e4dc89;
+    --color-fuente-oscura: #83898d;
+    --color-fondo: #FCFBF2;
+
+    --imagen-fondo: url("../IMAGENES/FONDOPAGINA.jpg");
 }
 
 * {
@@ -16,7 +28,7 @@
 
 /* 2. Estilos de Base (Cuerpo y Elementos Comunes) */
 body {
-    background-image: url("../IMAGENES/FONDOPAGINA2.jpg");
+    background-image: var(--imagen-fondo);
 
 
     background-repeat: repeat;
@@ -123,7 +135,7 @@ nav a:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 128, 0.25);
 }
 
-.terminalsalida dl  {
+.terminalsalida dl {
     font-size: 20px;
     color: var(--color-fuente-oscura);
     margin-bottom: 12px;
@@ -917,7 +929,7 @@ a {
         margin: 10px 0;
     }
 
-    .terminalsalida{
+    .terminalsalida {
         padding: 14px;
         margin: 14px 0;
     }
@@ -1059,7 +1071,7 @@ span.burbuja {
 }
 
 .flecha-acento {
-  color: var(--color-primario-azul-marino);
+    color: var(--color-primario-azul-marino);
 }
 
 /* ==========================================================================
