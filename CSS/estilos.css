@@ -1077,7 +1077,7 @@ nav.navbar.navbar-bermudia {
     padding: 0.5rem 0.75rem;
 }
 
-/* Marca: logo + nombre */
+/* Marca: logo */
 nav.navbar-bermudia .navbar-brand {
     display: inline-flex;
     align-items: center;
