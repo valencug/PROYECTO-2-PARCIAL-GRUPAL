@@ -6,6 +6,34 @@
     --color-fuente-oscura: #00588F;
     --color-fondo: #FCFBF2;
 
+    /* Roles que antes usaban el azul marino (o un color fijo) y en modo oscuro cambian */
+    --color-texto: #000080;
+    /* texto general */
+    --color-barra: #000080;
+    /* header, nav y pie de cultura */
+    --color-velo: rgba(252, 251, 242, 0.88);
+    /* capa semitransparente del main sobre la imagen */
+
+    --imagen-fondo: url("../IMAGENES/FONDOPAGINA2.jpg");
+
+}
+
+/* MODO OSCURO: paleta de fondo marino (se activa con la clase "modo-dark" en <html>) */
+html.modo-dark {
+    --color-primario-azul-marino: #000080;
+    /* se mantiene: es la tinta oscura sobre celeste y amarillo */
+    --color-primario-celeste: #5bbcf0;
+    --color-acento: #e4dc89;
+    --color-fuente-oscura: #a9b8c6;
+    --color-fondo: #0c2240;
+
+    --color-texto: #e6f1fa;
+    --color-barra: #0a2552;
+    --color-velo: rgba(5, 17, 34, 0.86);
+
+    --imagen-fondo: url("../IMAGENES/FONDOPAGINAOSCURO.jpg");
+
+    color-scheme: dark;
 }
 
 * {
@@ -16,7 +44,7 @@
 
 /* 2. Estilos de Base (Cuerpo y Elementos Comunes) */
 body {
-    background-image: url("../IMAGENES/FONDOPAGINA2.jpg");
+    background-image: var(--imagen-fondo);
 
 
     background-repeat: repeat;
@@ -29,7 +57,7 @@ body {
     font-variation-settings: "MORF" 39;
     font-size: 16px;
     line-height: 1.6;
-    color: var(--color-primario-azul-marino);
+    color: var(--color-texto);
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -37,14 +65,13 @@ body {
 
 main {
     padding: 1rem;
-    background-color: rgba(252, 251, 242, 0.88);
-    /* tu --color-fondo con transparencia */
+    background-color: var(--color-velo);
     border-radius: 10px;
 }
 
 /* 3. Encabezado y Navegación */
 header {
-    background: var(--color-primario-azul-marino);
+    background: var(--color-barra);
     color: var(--color-acento);
     padding: 1.5rem;
 }
@@ -56,7 +83,7 @@ nav {
     flex-wrap: wrap;
     gap: 10px;
     padding: 15px;
-    background-color: var(--color-primario-azul-marino);
+    background-color: var(--color-barra);
 }
 
 nav ul {
@@ -79,7 +106,7 @@ nav a:hover {
 }
 
 .principal {
-    background-color: var(--color-primario-azul-marino);
+    background-color: var(--color-barra);
 }
 
 .propio {
@@ -123,7 +150,7 @@ nav a:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 128, 0.25);
 }
 
-.terminalsalida dl  {
+.terminalsalida dl {
     font-size: 20px;
     color: var(--color-fuente-oscura);
     margin-bottom: 12px;
@@ -227,7 +254,7 @@ h2 {
 
 h3 {
     font-size: 23px;
-    color: var(--color-primario-azul-marino);
+    color: var(--color-texto);
     margin-bottom: 10px;
 }
 
@@ -269,7 +296,7 @@ aside img {
 
 article a,
 section a {
-    color: var(--color-primario-azul-marino);
+    color: var(--color-texto);
     padding: 10px 15px;
     display: flex;
     flex-direction: column;
@@ -446,7 +473,7 @@ nav.menu-lugares {
 
 .piePagina {
     width: 100%;
-    background-color: #000080;
+    background-color: var(--color-barra);
 }
 
 .piePagina .seccionesPiePagina {
@@ -917,7 +944,7 @@ a {
         margin: 10px 0;
     }
 
-    .terminalsalida{
+    .terminalsalida {
         padding: 14px;
         margin: 14px 0;
     }
@@ -1059,7 +1086,7 @@ span.burbuja {
 }
 
 .flecha-acento {
-  color: var(--color-primario-azul-marino);
+    color: var(--color-texto);
 }
 
 /* ==========================================================================
@@ -1140,4 +1167,58 @@ nav.navbar-bermudia .navbar-nav .nav-link.active {
     nav.navbar-bermudia .navbar-nav {
         padding: 0.5rem 0;
     }
+}
+
+/* ==========================================================================
+   Modo oscuro - ajustes puntuales
+   Los colores principales cambian por las variables de html.modo-dark (arriba).
+   Acá van solo las cosas que tenían colores fijos o que dependen del navegador.
+   Todo cuelga de "html.modo-dark", así que el modo claro no se toca.
+   ========================================================================== */
+
+/* Navbar de Bootstrap: su fondo sale de --bs-dark-rgb (equivale a --color-barra) */
+html.modo-dark nav.navbar.navbar-bermudia {
+    --bs-dark-rgb: 10, 37, 82;
+}
+
+/* Pie de página simple (celeste en modo claro) */
+html.modo-dark footer {
+    background-color: #0f3057;
+    color: var(--color-texto);
+}
+
+html.modo-dark footer a {
+    color: var(--color-acento);
+}
+
+/* Formularios */
+html.modo-dark input,
+html.modo-dark textarea,
+html.modo-dark select,
+html.modo-dark #fecha {
+    background-color: #10294a;
+    color: var(--color-texto);
+    border-color: var(--color-primario-celeste);
+}
+
+html.modo-dark input.formulario,
+html.modo-dark select.formulario {
+    border-color: var(--color-primario-celeste);
+}
+
+html.modo-dark details.formulario {
+    border-color: var(--color-primario-celeste);
+}
+
+/* Fechas y links sueltos */
+html.modo-dark time {
+    color: #7cc4f0;
+}
+
+html.modo-dark a.actividad {
+    color: var(--color-acento);
+}
+
+html.modo-dark a.actividad:hover {
+    color: orange;
 }
