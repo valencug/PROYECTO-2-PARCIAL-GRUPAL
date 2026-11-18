@@ -116,12 +116,13 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 128, 0.15);
 }
 
+
 .terminalsalida:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 128, 0.25);
 }
 
-.terminalsalida dl {
+.terminalsalida dl  {
     font-size: 20px;
     color: var(--color-fuente-oscura);
     margin-bottom: 12px;
@@ -915,7 +916,7 @@ a {
         margin: 10px 0;
     }
 
-    .terminalsalida {
+    .terminalsalida{
         padding: 14px;
         margin: 14px 0;
     }
