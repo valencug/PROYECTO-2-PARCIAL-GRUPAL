@@ -3,8 +3,9 @@
     --color-primario-azul-marino: #000080;
     --color-primario-celeste: #90d5ff;
     --color-acento: #e4dc89;
-    --color-fuente-oscura: #00588F;
+    --color-fuente-oscura: #83898d;
     --color-fondo: #FCFBF2;
+
 }
 
 * {
@@ -1055,6 +1056,10 @@ span.burbuja {
 
 .etiqueta {
     background-color: crimson;
+}
+
+.flecha-acento {
+  color: var(--color-primario-azul-marino);
 }
 
 /* ==========================================================================
