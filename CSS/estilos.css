@@ -24,7 +24,7 @@ html.modo-dark {
     /* se mantiene: es la tinta oscura sobre celeste y amarillo */
     --color-primario-celeste: #5bbcf0;
     --color-acento: #e4dc89;
-    --color-fuente-oscura: #a9b8c6;
+    --color-fuente-oscura: #fffac3;
     --color-fondo: #0c2240;
 
     --color-texto: #e6f1fa;
@@ -419,7 +419,7 @@ html {
 .lugar dt {
     margin-top: 12px;
     font-size: 18px;
-    color: var(--color-primario-azul-marino);
+    color: var(--color-fuente-oscura);
 }
 
 .lugar dd {

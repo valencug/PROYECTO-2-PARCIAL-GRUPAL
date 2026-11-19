@@ -17,11 +17,12 @@
         if (localStorage.getItem('modo-dark') === 'enabled') {
             document.documentElement.classList.add('modo-dark');
         }
-    </script>
+    </script>    
 </head>
 
 <body>
-    <button id="modoOscuro" type="button" class="btn btn-dark modo-dark">
+    <button id="modoOscuro" type="button" class="btn btn-dark"
+        data-label-light="Modo oscuro" data-label-dark="Modo claro">
         Modo oscuro
     </button>
 
@@ -36,8 +37,9 @@
             <a class="navbar-brand" href="index.html">
                 <img src="IMAGENES/LOGOBERMUDIA1.png" alt="Bermudia" class="logo-navbar">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false"
+                aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menuPrincipal">
@@ -58,8 +60,7 @@
                         <a class="nav-link" href="eventos.html">Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="lugares de interes.html">Lugares de
-                            interés</a>
+                        <a class="nav-link active" aria-current="page" href="lugares de interes.html">Lugares de interés</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
